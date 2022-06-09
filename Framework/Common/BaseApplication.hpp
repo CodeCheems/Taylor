@@ -1,7 +1,7 @@
 #pragma once
 #include "IApplication.hpp"
 
-namespace MY
+namespace My
 {
    class BaseApplication:implements IApplication
    {
