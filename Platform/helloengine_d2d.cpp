@@ -211,7 +211,7 @@ HRESULT DemoApp::CreateDeviceResources()
         {
             // Create a gray brush.
             hr = m_pRenderTarget->CreateSolidColorBrush(
-                D2D1::ColorF(D2D1::ColorF::LightSlateGray),
+                D2D1::ColorF(D2D1::ColorF(0x9ACD32, 1.0f)),
                 &m_pLightSlateGrayBrush
             );
         }
@@ -329,7 +329,7 @@ HRESULT DemoApp::OnRender()
         int width = static_cast<int>(rtSize.width);
         int height = static_cast<int>(rtSize.height);
 
-        for (int x = 0; x < width; x += 10)
+        for (int x = 0; x < width; x += 20)
         {
             m_pRenderTarget->DrawLine(
                 D2D1::Point2F(static_cast<FLOAT>(x), 0.0f),
@@ -339,7 +339,7 @@ HRESULT DemoApp::OnRender()
             );
         }
 
-        for (int y = 0; y < height; y += 10)
+        for (int y = 0; y < height; y += 20)
         {
             m_pRenderTarget->DrawLine(
                 D2D1::Point2F(0.0f, static_cast<FLOAT>(y)),
@@ -365,7 +365,7 @@ HRESULT DemoApp::OnRender()
         );
 
         // Draw a filled rectangle.
-        m_pRenderTarget->FillRectangle(&rectangle1, m_pLightSlateGrayBrush);
+        m_pRenderTarget->FillRectangle(&rectangle1, m_pCornflowerBlueBrush);
 
         hr = m_pRenderTarget->EndDraw();
     }
