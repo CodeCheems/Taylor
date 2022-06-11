@@ -366,7 +366,7 @@ HRESULT DemoApp::OnRender()
 
         // Draw a filled rectangle.
         m_pRenderTarget->FillRectangle(&rectangle1, m_pCornflowerBlueBrush);
-
+        m_pRenderTarget->DrawRectangle(&rectangle2, m_pCornflowerBlueBrush);
         hr = m_pRenderTarget->EndDraw();
     }
     if (hr == D2DERR_RECREATE_TARGET)
