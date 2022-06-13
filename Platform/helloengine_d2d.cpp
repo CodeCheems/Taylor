@@ -389,10 +389,10 @@ void DemoApp::OnResize(UINT width, UINT height)
 }
 
 int WINAPI WinMain(
-    HINSTANCE /* hInstance */,
-    HINSTANCE /* hPrevInstance */,
-    LPSTR /* lpCmdLine */,
-    int /* nCmdShow */
+    HINSTANCE  hInstance,
+    HINSTANCE  hPrevInstance,
+    LPSTR  lpCmdLine,
+    int  nCmdShow
 )
 {
     // Use HeapSetInformation to specify that the process should
@@ -414,6 +414,7 @@ int WINAPI WinMain(
         }
         CoUninitialize();
     }
+    //MessageBox(NULL, "Hello Windows£°", "±ÍÃ‚", 0);
 
     return 0;
 }
